@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.2.0", "wheel", "setuptools_scm[toml]>=3.4.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AptSourcesHardener"
+authors = [{name = "KOLANICH"}]
+description = "A package to harden sources.list in Debian-based distros. Binds sources to their public keys using `signed-by`."
+readme = "ReadMe.md"
+keywords = ["APT", "Debian", "Ubuntu", "Mint", "Kali", "Antix"]
+license = {text = "Unlicense"}
+classifiers = [
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Development Status :: 4 - Beta",
+	"Environment :: Other Environment",
+	"Intended Audience :: End Users/Desktop",
+	"License :: Public Domain",
+	"Operating System :: POSIX",
+]
+requires-python = ">=3.4"
+dependencies = [
+	"AptSourcesList @ git+https://codeberg.org/KOLANICH/AptSourcesList.py.git",
+	"plumbum @ git+https://github.com/tomerfiliba/plumbum.git",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://codeberg.org/KOLANICH-tools/AptSourcesHardener.py"
+
+[tool.setuptools]
+zip-safe = true
+include-package-data = true
+packages = ["AptSourcesHardener"]
+
+[tool.setuptools_scm]
