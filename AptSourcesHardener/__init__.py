@@ -16,6 +16,7 @@ from fuckapt.machinery import getSigsInCaches
 
 from .crypto import *
 
+warnings.warn("We have moved from M$ GitHub to https://codeberg.org/KOLANICH-tools/AptSourcesHardener.py , read why on https://codeberg.org/KOLANICH/Fuck-GuanTEEnomo .")
 
 def createCachedSignatureFileNameForSourceDescriptor(el):
 	parsedURI = urlparse(el.uri)
